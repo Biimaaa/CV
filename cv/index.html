@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bima Kurnia Sandi - CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #1abc9c;
+        --light-color: #ecf0f1;
+        --dark-color: #34495e;
+        --text-color: #333;
+        --text-light: #7f8c8d;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: #f9f9f9;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        overflow: hidden;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--dark-color)
+        );
+        color: white;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid white;
+        margin-right: 30px;
+        box-shadow: var(--box-shadow);
+      }
+
+      .header-content {
+        flex: 1;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      .role {
+        font-size: 1.1rem;
+        color: var(--light-color);
+        margin-bottom: 15px;
+        font-weight: 400;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+      }
+
+      .contact-item i {
+        margin-right: 8px;
+        color: var(--accent-color);
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 30px;
+      }
+
+      .section {
+        margin-bottom: 25px;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      .section-title i {
+        margin-right: 10px;
+        color: var(--accent-color);
+        font-size: 1.1rem;
+      }
+
+      .section-content {
+        padding-left: 25px;
+      }
+
+      .about-text {
+        text-align: justify;
+        line-height: 1.7;
+      }
+
+      .education-item,
+      .experience-item {
+        margin-bottom: 20px;
+      }
+
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+
+      .item-title {
+        font-weight: 600;
+        color: var(--dark-color);
+      }
+
+      .item-date {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      .item-subtitle {
+        color: var(--secondary-color);
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skill {
+        background-color: var(--light-color);
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        color: var(--dark-color);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .social-link {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--light-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .social-link:hover {
+        background-color: var(--secondary-color);
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      .buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border-radius: var(--border-radius);
+        font-weight: 500;
+        text-decoration: none;
+        transition: var(--transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn-primary {
+        background-color: var(--secondary-color);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #2980b9;
+      }
+
+      .btn-secondary {
+        background-color: var(--light-color);
+        color: var(--primary-color);
+      }
+
+      .btn-secondary:hover {
+        background-color: #bdc3c7;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: var(--light-color);
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          text-align: center;
+          padding: 25px 20px;
+        }
+
+        .profile-img {
+          margin-right: 0;
+          margin-bottom: 20px;
+          width: 100px;
+          height: 100px;
+        }
+
+        .contact-info {
+          justify-content: center;
+        }
+
+        .main-content {
+          grid-template-columns: 1fr;
+          padding: 20px;
+        }
+
+        .buttons {
+          justify-content: center;
+        }
+      }
+
+      @media print {
+        body {
+          background: none;
+          padding: 0;
+        }
+
+        .container {
+          box-shadow: none;
+        }
+
+        .buttons {
+          display: none;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Untuk foto profil, ganti src dengan path foto Anda -->
+        <img
+          src="Beema.jpg"
+          alt="Bima Kurnia Sandi"
+          class="profile-img"
+        />
+        <div class="header-content">
+          <h1>Bima Kurnia Sandi</h1>
+          <p class="role">
+            Mahasiswa Teknik Informatika | Web Developer | Administrasi
+            Perkantoran
+          </p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>bimakurniasandi@email.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Indonesia</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="main-content">
+        <div class="left-column">
+          <section class="section">
+            <div class="section-title">
+              <i class="fas fa-user"></i>
+              <h2>Profil Singkat</h2>
+            </div>
+            <div class="section-content">
+              <p class="about-text">
+                Mahasiswa aktif Teknik Informatika yang juga memiliki latar
+                belakang Manajemen Perkantoran dari SMK N 1 Metro serta
+                pengalaman magang selama 3 bulan di Kecamatan Metro Pusat. Mampu
+                mengelola dokumen administratif dan juga membangun aplikasi
+                berbasis web.
+              </p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">
+              <i class="fas fa-graduation-cap"></i>
+              <h2>Pendidikan</h2>
+            </div>
+            <div class="section-content">
+              <div class="education-item">
+                <div class="item-header">
+                  <span class="item-title">S1 Teknik Informatika</span>
+                  <span class="item-date">2023 - Sekarang</span>
+                </div>
+                <p class="item-subtitle">Universitas Dharma Wacana</p>
+              </div>
+              <div class="education-item">
+                <div class="item-header">
+                  <span class="item-title">SMK Negri 1 Metro</span>
+                  <span class="item-date">2020 - 2023</span>
+                </div>
+                <p class="item-subtitle">Manajemen Perkantoran</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">
+              <i class="fas fa-briefcase"></i>
+              <h2>Pengalaman</h2>
+            </div>
+            <div class="section-content">
+              <div class="experience-item">
+                <div class="item-header">
+                  <span class="item-title">Magang Administratif</span>
+                  <span class="item-date">Januari 2022 - Maret 2022</span>
+                </div>
+                <p class="item-subtitle">Kecamatan Metro Pusat</p>
+              </div>
+              <div class="experience-item">
+                <div class="item-header">
+                  <span class="item-title">Developer Aplikasi</span>
+                  <span class="item-date">2025</span>
+                </div>
+                <p class="item-subtitle">
+                  Perpustakaan Digital (PHP Native + MySQL)
+                </p>
+              </div>
+              <div class="experience-item">
+                <div class="item-header">
+                  <span class="item-title">Developer Website</span>
+                  <span class="item-date">2025</span>
+                </div>
+                <p class="item-subtitle">E-commerce Elektronik</p>
+              </div>
+        <div class="right-column">
+          <section class="section">
+            <div class="section-title">
+              <i class="fas fa-laptop-code"></i>
+              <h2>Kemampuan Teknis</h2>
+            </div>
+            <div class="section-content">
+              <div class="skills-container">
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+                <span class="skill">PHP Native</span>
+                <span class="skill">MySQL</span>
+                <span class="skill">CRUD</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Desain Dashboard</span>
+                <span class="skill">Responsive Layout</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">
+              <i class="fas fa-file-alt"></i>
+              <h2>Kemampuan Administratif</h2>
+            </div>
+            <div class="section-content">
+              <div class="skills-container">
+                <span class="skill">Pengarsipan Dokumen</span>
+                <span class="skill">Pengetikan Cepat</span>
+                <span class="skill">Surat-Menyurat</span>
+                <span class="skill">Microsoft Word</span>
+                <span class="skill">Microsoft Excel</span>
+                <span class="skill">Microsoft PowerPoint</span>
+                <span class="skill">Pelayanan Publik</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">
+              <i class="fas fa-users"></i>
+              <h2>Organisasi</h2>
+            </div>
+            <div class="section-content">
+              <p>
+                Aktif dalam organisasi kampus sebagai anggota Himpunan Mahasiswa
+                Teknik Informatika (HMTI) yang berfokus pada pengembangan
+                kemampuan teknis dan kepemimpinan. Berpartisipasi dalam berbagai
+                kegiatan seperti seminar, workshop, dan lomba coding.
+              </p>
+            </div>
+          </section>
+
+          <section class="section">
+            <div class="section-title">
+              <i class="fas fa-share-alt"></i>
+              <h2>Media Sosial</h2>
+            </div>
+            <div class="section-content">
+              <div class="social-links">
+                <a href="#" class="social-link" target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" class="social-link" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="social-link" target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social-link" target="_blank"
+                  ><i class="fab fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+          </section>
+
+          <div class="buttons">
+            <a href="#" class="btn btn-primary">
+              <i class="fas fa-download"></i>
+              Unduh CV (PDF)
+            </a>
+            <a href="#" class="btn btn-secondary">
+              <i class="fas fa-paper-plane"></i>
+              Hubungi Saya
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer>&copy; 2023 Bima Kurnia Sandi. All rights reserved.</footer>
+    </div>
+  </body>
+</html>
